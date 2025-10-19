@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const correctPassword = "091008";
+  const correctPassword = "090417";
 
   // Pages
   const loginPage = document.getElementById("loginPage");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function logVisit(note) {
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbwK1nKprehPduuTM1hIaNwIX4tLUywHL-GAJjZL4DAs7KjCHWtl9SKBFnxjxrvhH1_ZJA/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbzwXECGGfU05ATMG866E0rJuUL3wZH5WcFGIuGiiJB5NR-yRxgtpc5AqdTS-nRmVuyJ/exec", {
       method: "POST",
       body: JSON.stringify({ message: note }),
       headers: { "Content-Type": "application/json" },
