@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ✅ Load diary list from JSON
   function loadDiaries() {
-    fetch("diary.json")
+    fetch("letter for tina.json")
       .then((res) => {
         console.log('Fetch status:', res.status);  // Logs 200, 404, etc.
         console.log('Fetch URL:', res.url);  // Shows the full path it's trying
-        if (!res.ok) throw new Error("Failed to load diary.json - Status: " + res.status);
+        if (!res.ok) throw new Error("Failed to load letter for tina.json - Status: " + res.status);
         return res.json();
       })
       .then((data) => {
