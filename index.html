@@ -49,10 +49,10 @@
 
    <script>
     $(document).ready(function () {
-      var audio = new Audio('audio/mySong.mp3');
-      $("#btn").click(function () {
-        $("#introText").fadeOut();
-        $("#letterBox").fadeIn("1000");
+      var audio = new Audio('audio/audio.mp3');
+      $("#loginBtn").click(function () {
+        $("#page").fadeOut();
+        $("#page hidden").fadeIn("1000");
         audio.play();
       });
     });
