@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       })
       .catch((err) => {
-        diaryList.innerHTML = '<li style="color:black;">Sorry.. Tak Dapat Nak Access</li>';
+        diaryList.innerHTML = '<li style="color:black;">Sorry.. Tak Dapat Nak Access.. Try Refresh..</li>';
         console.error('Fetch error:', err.message);  // Logs the real error
       });
   }
