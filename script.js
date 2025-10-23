@@ -108,6 +108,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("diaryDate").textContent = entry.date ? entry.date : ''; // Load date from JSON; empty if missing
   }
 
+  // ✅ Back to list
+  backBtn.addEventListener("click", () => {
+    viewPage.classList.add("hidden");
+    listPage.classList.remove("hidden");
+  });
+
  // jika di bukak google sheet detect 
     logVisit("Opened");
   
