@@ -133,7 +133,7 @@ li::before {
   height: auto;
   border: 8px solid #fff; /* Polaroid frame */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  transform: rotate(5deg); /* Slight tilt for Polaroid feel */
+  transform: rotate(15deg); /* Adjusted to 15deg for a more tilted, letter-like feel; try 10-45deg as preferred */
   cursor: pointer; /* Indicates it's clickable */
   transition: width 0.3s ease, transform 0.3s ease; /* Smooth toggle */
   z-index: 10; /* Ensure it's on top */
@@ -151,6 +151,7 @@ li::before {
   height: auto;
   display: block;
 }
+
 @keyframes reveal {
   from {
     opacity: 0;
