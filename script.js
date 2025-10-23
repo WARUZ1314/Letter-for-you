@@ -97,15 +97,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
- // ✅ View diary details
-function openDiary(index) {
-  const entry = diaries[index];
-  if (!entry) return;
-  listPage.classList.add("hidden");
-  viewPage.classList.remove("hidden");
-  diaryTitle.textContent = entry.title;
-  diaryContent.textContent = entry.content;
-  document.getElementById("diaryDate").textContent = entry.date ? entry.date : ''; // Load date from JSON
+// ✅ View diary details
+  function openDiary(index) {
+    const entry = diaries[index];
+    if (!entry) return;
+    listPage.classList.add("hidden");
+    viewPage.classList.remove("hidden");
+    diaryTitle.textContent = entry.title;
+    diaryContent.textContent = entry.content;
+    document.getElementById("diaryDate").textContent = entry.date ? entry.date : ''; // Load date from JSON; empty if missing
+  }
 
   // Clear any existing Polaroid
   const existingPolaroid = document.querySelector('.polaroid');
