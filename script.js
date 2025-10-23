@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((res) => {
         console.log('Fetch status:', res.status);  // Logs 200, 404, etc.
         console.log('Fetch URL:', res.url);  // Shows the full path it's trying
-        if (!res.ok) throw new Error("Failed to load letter for tina.json - Status: " + res.status);
+        if (!res.ok) throw new Error("Failed to load diary.json - Status: " + res.status);
         return res.json();
       })
       .then((data) => {
@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       })
       .catch((err) => {
-        diaryList.innerHTML = '<li style="color:black;">Sorry.. Tak Dapat Nak Access.. Try Refresh..</li>';
+        diaryList.innerHTML = '<li style="color:black;">Sorry.. Tak Dapat Nak Access</li>';
         console.error('Fetch error:', err.message);  // Logs the real error
       });
   }
 
-// ✅ View diary details
+  // ✅ View diary details
   function openDiary(index) {
     const entry = diaries[index];
     if (!entry) return;
