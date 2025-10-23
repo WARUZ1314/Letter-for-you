@@ -120,36 +120,8 @@ li::before {
   line-height: 1.6;
   white-space: pre-wrap; /* Preserve line breaks from JSON */
   animation: reveal 1s ease-out; /* Animation on open */
-  max-height: 300px; /* From previous update */
-  overflow-y: auto; /* From previous update */
-  position: relative; /* Allows absolute positioning of child elements like the image */
-}
-
-.polaroid {
-  position: absolute;
-  bottom: 10px; /* Corner position; adjust as needed */
-  right: 10px;
-  width: 100px; /* Small size */
-  height: auto;
-  border: 8px solid #fff; /* Polaroid frame */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  transform: rotate(15deg); /* Adjusted to 15deg for a more tilted, letter-like feel; try 10-45deg as preferred */
-  cursor: pointer; /* Indicates it's clickable */
-  transition: width 0.3s ease, transform 0.3s ease; /* Smooth toggle */
-  z-index: 10; /* Ensure it's on top */
-}
-
-.polaroid.enlarged {
-  width: 300px; /* Larger size; adjust as needed */
-  transform: rotate(0deg); /* Straighten when enlarged */
-  bottom: 20px; /* Slight reposition if needed */
-  right: 20px;
-}
-
-.polaroid img {
-  width: 100%;
-  height: auto;
-  display: block;
+  max-height: 300px; /* Adjust this value based on your design; e.g., 300px or 50vh */
+  overflow-y: auto; /* Enables vertical scrolling if content exceeds max-height */
 }
 
 @keyframes reveal {
