@@ -122,6 +122,34 @@ li::before {
   animation: reveal 1s ease-out; /* Animation on open */
   max-height: 300px; /* Adjust this value based on your design; e.g., 300px or 50vh */
   overflow-y: auto; /* Enables vertical scrolling if content exceeds max-height */
+  position: relative; /* Allows absolute positioning for Polaroid */
+}
+
+.polaroid {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100px; /* Small size */
+  height: auto;
+  border: 8px solid #fff; /* Polaroid frame */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transform: rotate(15deg); /* Tilted for letter-like feel */
+  cursor: pointer;
+  transition: width 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.polaroid.enlarged {
+  width: 300px; /* Larger size */
+  transform: rotate(0deg); /* Straighten when enlarged */
+  bottom: 20px;
+  right: 20px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 @keyframes reveal {
@@ -188,4 +216,58 @@ li::before {
 
 #passwordInput {
   font-family: "Courier New", monospace; /* Example: Monospace font for a 'code-like' look; change to your preferred font */
+}
+
+#viewPage {
+  position: relative; /* Positioning context */
+}
+
+/* Small Polaroid (outside corner) */
+.polaroid {
+  position: absolute;
+  bottom: -20px; /* Slightly outside bottom */
+  right: -20px; /* Slightly outside right */
+  width: 100px;
+  height: auto;
+  border: 8px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: rotate(15deg);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 20;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Modal Popup */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  z-index: 100; /* On top of everything */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+#modalImage {
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  border: 8px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: rotate(0deg); /* Straight in popup */
 }
