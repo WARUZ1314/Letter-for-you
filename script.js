@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let diaries = [];
 
   // Prepare audio
-  const audio = new Audio("audio/audio.mp3");
+  const audio = new Audio("/audio.mp3");
   audio.loop = true; // audio akan repeat
 
   // Toggle password visibility
