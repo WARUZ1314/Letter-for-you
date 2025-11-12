@@ -139,7 +139,7 @@ const modal = document.getElementById('polaroidModal');
 modal.addEventListener('click', () => {
   modal.style.display = 'none';  // Close on click anywhere
 });
-  
+   
   // ✅ Back to list
   backBtn.addEventListener("click", () => {
     $(viewPage).fadeOut(400, function() {
